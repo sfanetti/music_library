@@ -61,7 +61,7 @@ body {
 }
 
 .item {
-  padding: 10px 20px;
+  padding: 16px;
   border: 1px solid #efefef;
   display:  flex;
   border-radius: 10px;
@@ -88,6 +88,8 @@ body {
   display: flex;
   background-color: #e4e4e4;
   justify-content: center;
+  align-self: center;
+  flex: 0 0 auto;
 }
 
 .detail .image-container {

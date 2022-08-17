@@ -35,7 +35,9 @@ function GalleryItem({item}) {
                         <h4 className='release-date'>{item.releaseDate}</h4>
                     </div>
                 </div>
-                <p className='description'>{item.longDescription}</p>                
+                {
+                    item.longDescription ? <p className='description'>{item.longDescription}</p> : ''
+                }
             </>
         )
     }
