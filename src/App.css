@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.application {
+  background-color: #c6c6c6;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.search-bar {
+  padding: 20px 30px;
+  display: flex;
+  width: calc(100% - 60px);
+  background-color: #818181;
+}
+
+.search-bar input {
+  font-size: 1.5em;
+  border-radius: 5px 0 0 5px;
+  padding: 10px 12px; 
+  flex: 1 1 100%;
+}
+
+.search-bar button {
+  font-size: 1.5em;
+  border-radius: 0 5px 5px 0;
+  border-left: none;
+  padding: 10px 12px; 
+  background-color: steelblue;
   color: white;
+  font-weight: 400;
+  flex: 0 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.content-area {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 92px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gallery {
+  display: flex;
+  gap: 10px;
+  background-color: #c6c6c6;
+  justify-content: center;
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item {
+  padding: 10px 20px;
+  border: 1px solid #efefef;
+  display:  flex;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.item-container {
+  align-self: center;
+  width: 100%;
+}
+
+.simple img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.detail img {
+  max-width: 130px;
+  max-height: 130px;
+}
+
+.image-container {
+  display: flex;
+  background-color: #e4e4e4;
+  justify-content: center;
+}
+
+.detail .image-container {
+  width: 130px;
+  height: 130px;
+}
+
+.simple .image-container {
+  width: 60px;
+  height: 60px;
+}
+
+.simple {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.title-area {width:  100%;display: flex;gap:  20px;}
+
+
+.track-name{
+  margin: 0;
+}
+
+.collection-name{
+  margin: 0;
+  color:#7a7a7a;
+} 
+
+.genre{
+  margin: 0;
+  color:#7a7a7a;
+}
+
+.release-date{
+  margin: 0;
+  color:#7a7a7a;
+} 
