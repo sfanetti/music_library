@@ -18,12 +18,17 @@ export default function MusicProvider({children}) {
         const fetchData = async () => {
             setMessage('');
             document.title = `${search} Music`;
-            const response = await fetch(`https://itunes.apple.com/search?term=${search}`);
-            const resData = await response.json();
-            if (resData.results.length > 0) {
-                setData(resData.results);
-            } else {
-                setMessage('No Songs Found');
+            try {
+                const response = await fetch(`https://itunes.apple.com/search?term=${search.toUpperCase()}`);
+                const resData = await response.json();
+                if (resData.results.length > 0) {
+                    setData(resData.results);
+                } else {
+                    setMessage('No Songs Found');
+                    setData([]);
+                }
+            } catch (e) {
+                setMessage('An error occurred.  Please try again');
                 setData([]);
             }
         }
@@ -45,6 +50,4 @@ export default function MusicProvider({children}) {
             {children}
         </MusicContext.Provider>
     );
-
-
 }
